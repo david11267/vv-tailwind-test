@@ -27,6 +27,8 @@ export default function Home() {
           alt="image"
           prevText="&#60;/PREVIOUS"
           nextText="NEXT/&#62;"
+          prevHref="/"
+          nextHref="/"
         />
       </div>
     </main>

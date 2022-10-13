@@ -12,8 +12,8 @@ export default class HeaderImageNextPrev extends Component {
           <div className="ml-7">
             <img className="" src={this.props.src} alt={this.props.alt} />
             <div className="flex justify-between mt-3">
-              <a>{this.props.prevText}</a>
-              <a>{this.props.nextText}</a>
+              <a href={this.props.prevHref}>{this.props.prevText}</a>
+              <a href={this.props.nextHref}>{this.props.nextText}</a>
             </div>
           </div>
         </div>
