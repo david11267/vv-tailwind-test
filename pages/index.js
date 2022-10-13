@@ -25,6 +25,8 @@ export default function Home() {
         <HeaderImageNextPrev
           src="https://media.gq-magazine.co.uk/photos/5d13a04bb744d364a425653b/1:1/w_1280,h_1280,c_limit/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg"
           alt="image"
+          prevText="&#60;/PREVIOUS"
+          nextText="NEXT/&#62;"
         />
       </div>
     </main>
