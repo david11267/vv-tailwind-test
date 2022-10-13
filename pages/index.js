@@ -9,6 +9,7 @@ import HeaderAndText from "../Components/HeaderAndText";
 import styles from "../styles/Home.module.css";
 import HeaderImageNextPrev from "../Components/HeaderImageNextPrev";
 import Constilation from "../Components/Constilation";
+import SpaceCard from "../Components/SpaceCard";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
         <Footer />
         <CallToActionLink text="APPLY NOW!" />
         <Constilation />
+        <div>
+          <SpaceCard />
+        </div>
       </div>
     </main>
   );
