@@ -9,6 +9,7 @@ import HeaderAndText from "../Components/HeaderAndText";
 import HeaderImageNextPrev from "../Components/HeaderImageNextPrev";
 import Constilation from "../Components/Constilation";
 import SpaceCard from "../Components/SpaceCard";
+import ScrollingText from "../Components/ScrollingText";
 
 
 export default function Home() {
@@ -21,8 +22,9 @@ export default function Home() {
         <CallToActionLink text="APPLY NOW!" />
         <Constilation />
         <div>
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" width="40" height="40" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
         </div>
+        <ScrollingText text="BOOK A SPACE!-BOOK A SPACE!-BOOK A SPACE!"/>
       </div>
     </main>
   );
