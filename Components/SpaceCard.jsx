@@ -9,7 +9,7 @@ export default class SpaceCard extends Component {
           <div>
             <h2 className="text-center w-full align-middle">h2</h2>
             <p>VerketVerket</p>
-            <p>sum text</p>
+            <p>summ text</p>
           </div>
         </div>
       </div>
