@@ -10,6 +10,7 @@ import HeaderImageNextPrev from "../Components/HeaderImageNextPrev";
 import Constilation from "../Components/Constilation";
 import SpaceCard from "../Components/SpaceCard";
 
+
 export default function Home() {
   return (
     <main className="ml-20 mr-20">
