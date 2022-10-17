@@ -6,7 +6,6 @@ import HeroText from "../Components/HeroText";
 import Icon from "../Components/Icon";
 import NavBar from "../Components/NavBar";
 import HeaderAndText from "../Components/HeaderAndText";
-import styles from "../styles/Home.module.css";
 import HeaderImageNextPrev from "../Components/HeaderImageNextPrev";
 import Constilation from "../Components/Constilation";
 import SpaceCard from "../Components/SpaceCard";
@@ -21,7 +20,7 @@ export default function Home() {
         <CallToActionLink text="APPLY NOW!" />
         <Constilation />
         <div>
-          <SpaceCard />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" width="40" height="40" />
         </div>
       </div>
     </main>
