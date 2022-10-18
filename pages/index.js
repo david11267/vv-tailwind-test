@@ -24,7 +24,7 @@ export default function Home() {
         <div>
           <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
         </div>
-        <ScrollingText text="BOOK A SPACE!-BOOK A SPACE!-BOOK A SPACE!"/>
+        <ScrollingText text="BOOK A SPACE!"/>
       </div>
     </main>
   );
