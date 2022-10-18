@@ -21,7 +21,7 @@ export default function Home() {
         <Footer />
         <CallToActionLink text="APPLY NOW!" />
         <Constilation />
-        <div className="flex flex-wrap" >
+        <div className="flex flex-wrap justify-center" >
           <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
           <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
           <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />

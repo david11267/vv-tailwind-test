@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HeaderAndText from "../Components/HeaderAndText";
+import CallToActionLink from "./CallToActionLink";
 import HeaderImageNextPrev from "./HeaderImageNextPrev";
 
 export default class Constilation extends Component {
@@ -13,6 +14,8 @@ export default class Constilation extends Component {
               text2="VÄRMEVERKET"
               text3="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has ."
             />
+
+            <CallToActionLink href="/" text="Apply now"/>
           </div>
           <div>
             <HeaderImageNextPrev
