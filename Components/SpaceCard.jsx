@@ -8,7 +8,7 @@ export default class SpaceCard extends Component {
           <div className=" mt-4 h-fit text-center w-full align-middle">
             <h2 className="text-4xl">{this.props.bigHeader}</h2>
             <p className="">{this.props.littleHeader}</p>
-            <p className=" mt-3 text-xs">summ text</p>
+            <p className=" mt-3 text-xs">{this.props.tinyText}</p>
           </div>
         </div>
       </div>

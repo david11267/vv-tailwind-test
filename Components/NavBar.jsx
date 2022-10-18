@@ -4,7 +4,7 @@ import Icon from './Icon'
 export default class NavBar extends Component {
   render() {
     return (
-      <div className='flex justify-between'>
+      <div className='flex justify-between mb-80'>
             <Icon className="h-20 " src="https://hypermedia.varmeverket.com/logo.svg" alt="logo"/>
             <div>
                 <ul className='mt-7 flex space-x-4'>

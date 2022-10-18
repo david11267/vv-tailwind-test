@@ -10,32 +10,35 @@ import HeaderImageNextPrev from "../Components/HeaderImageNextPrev";
 import Constilation from "../Components/Constilation";
 import SpaceCard from "../Components/SpaceCard";
 import ScrollingText from "../Components/ScrollingText";
-
+import BgSwirlVideo from "../Components/BgSwirlVideo";
+import ExplainingText from "../Components/ExplainingText";
+import SpacesCardContainer from "../Components/SpacesCardContainer";
 
 export default function Home() {
   return (
-    <main className="ml-20 mr-20">
-      <div>
+    <>
+      <BgSwirlVideo source="https://hypermedia.varmeverket.com/39.mp4" />
+
+      <main className="m-8">
         <NavBar />
         <HeroText />
-        <Footer />
-        <CallToActionLink text="APPLY NOW!" />
+        <ExplainingText
+          boldEnd="PIONEER?"
+          text2="ARE YOU A FUTURE."
+          text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
+        />
+        <Constilation callToActionHref="/" callToActionText="APPLY NOW!" />
+        <HeroText />
+        <ExplainingText
+          boldEnd="PIONEER?"
+          text2="ARE YOU A FUTURE."
+          text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
+        />
         <Constilation />
-        <div className="flex flex-wrap justify-center" >
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
-          
-        </div>
-        <ScrollingText text="BOOK A SPACE!"/>
-      </div>
-    </main>
+        <SpacesCardContainer/>
+   
+      </main>
+      <Footer />
+    </>
   );
 }

@@ -6,16 +6,16 @@ import HeaderImageNextPrev from "./HeaderImageNextPrev";
 export default class Constilation extends Component {
   render() {
     return (
-      <div className="mt-20">
-        <div className="flex flex-row justify-between">
-          <div className="mt-28">
+      <div className="mt-20 mb-80">
+        <div className="flex flex-row justify-center">
+          <div className="mt-28 mr-20">
             <HeaderAndText
               text1="VÄRMEVERKET"
               text2="VÄRMEVERKET"
               text3="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has ."
             />
 
-            <CallToActionLink href="/" text="Apply now"/>
+            <CallToActionLink href={this.props.callToActionHref} text={this.props.callToActionText}/>
           </div>
           <div>
             <HeaderImageNextPrev
@@ -25,7 +25,7 @@ export default class Constilation extends Component {
               nextText="NEXT/&#62;"
               prevHref="/"
               nextHref="/"
-              imageWidth="500"
+              imageWidth="450"
             />
           </div>
         </div>
