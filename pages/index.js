@@ -21,8 +21,18 @@ export default function Home() {
         <Footer />
         <CallToActionLink text="APPLY NOW!" />
         <Constilation />
-        <div>
+        <div className="flex flex-wrap" >
           <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          <SpaceCard indexNr={"#001"} bigHeader="VV" littleHeader="Värmeverket" />
+          
         </div>
         <ScrollingText text="BOOK A SPACE!"/>
       </div>

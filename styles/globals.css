@@ -28,13 +28,15 @@ h1 {
   background-size: 500% 500%;
   background-blend-mode: overlay;
   background-position: 0% 50%;
-  transition: 1s
+  transition: 1s;
+ 
 }
 .spaceCardAnimation:hover{
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 500% 500%;
 	animation: gradient 5s ease-in infinite;
-  transition: 1s;
+  transition: 300ms;
+  transition-delay: 200ms;
   opacity: 1;
 }
 
