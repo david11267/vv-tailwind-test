@@ -4,15 +4,16 @@
 
 @font-face {
   font-family: "Fuzzy Bubbles";
-  src: url("/Resources/Fonts/FuzzyBubbles/FuzzyBubbles.ttf");
+  src: url("/public/Fonts/FuzzyBubbles/FuzzyBubbles.ttf");
 }
 @font-face {
   font-family: "GT America";
-  src: url("/Resources/Fonts/GT America/Watered Down/GT America Expanded.otf");
+  src: url("/public/Fonts/GT America/Watered Down/GT America Expanded.otf");
 }
 @font-face {
-  font-family: "GT America";
-  src: url("/Resources/Fonts/GT America/Watered Down/GT America Compressed.otf");
+  font-family: "GT America Expanded Black";
+  src: local("GT America Expanded Black"), url("/public/Fonts/GT America/Watered Down/GT America Expanded Black.otf"),
+    format("opentype");
 }
 
 html,
