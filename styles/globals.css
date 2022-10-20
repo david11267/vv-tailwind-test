@@ -12,8 +12,7 @@
 }
 @font-face {
   font-family: "GT America Expanded Black";
-  src: local("GT America Expanded Black"), url("/public/Fonts/GT America/Watered Down/GT America Expanded Black.otf"),
-    format("opentype");
+  src: url("/public/Fonts/GTAmerica/WateredDown/GTAmericaExpandedBlack.ttf");
 }
 
 html,
