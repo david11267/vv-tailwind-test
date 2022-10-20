@@ -35,7 +35,7 @@ export default class NavBar extends Component {
             <Icon className="h-20" src="https://hypermedia.varmeverket.com/logo.svg" alt="logo" />
 
             <div>
-
+              {fullNavBar()}
             </div>
           </div>
         </div>
