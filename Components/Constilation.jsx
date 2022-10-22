@@ -3,7 +3,8 @@ import HeaderAndText from "../Components/HeaderAndText";
 import CallToActionLink from "./CallToActionLink";
 import HeaderImageNextPrev from "./HeaderImageNextPrev";
 import { useWindowSize } from "../hooks/useWindowSize";
-function FullSize() {
+
+function FullSize({ callToActionHrf, callToActionText }) {
   return (
     <div className="mt-20 mb-80">
       <div className="flex flex-row justify-center">
@@ -14,7 +15,7 @@ function FullSize() {
             text3="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has ."
           />
 
-          <CallToActionLink href="/" text="APPLY NOW" />
+          <CallToActionLink href={callToActionHrf} text={callToActionText} />
         </div>
         <div>
           <HeaderImageNextPrev
@@ -31,7 +32,7 @@ function FullSize() {
     </div>
   );
 }
-function Mobile() {
+function Mobile({ callToActionHrf, callToActionText }) {
   return (
     <div className="mt-20 mb-80">
       <div className="flex flex-row justify-center">
@@ -52,11 +53,14 @@ function Mobile() {
           text3="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has ."
         />
       </div>
+      <div className="flex justify-center">
+        <CallToActionLink href={callToActionHrf} text={callToActionText} />
+      </div>
     </div>
   );
 }
 
-export default function Constilation() {
+export default function Constilation(props) {
   const size = useWindowSize();
-  return <div>{size.width > 1000 ? <FullSize /> : <Mobile />}</div>;
+  return <div>{size.width > 1000 ? <FullSize {...props} /> : <Mobile {...props} />}</div>;
 }

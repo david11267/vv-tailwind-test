@@ -35,7 +35,7 @@ export default function Home() {
             text2="ARE YOU A FUTURE."
             text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
           />
-          <Constilation />
+          <Constilation callToActionHrf="www.google.se" callToActionText="Hej " />
           <SpacesCardContainer />
         </div>
       </main>
