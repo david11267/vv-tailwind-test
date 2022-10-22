@@ -19,23 +19,25 @@ export default function Home() {
     <>
       <BgSwirlVideo source="https://hypermedia.varmeverket.com/39.mp4" />
 
-      <main className="m-8 border">
-        <NavBar />
-        <HeroText />
-        <ExplainingText
-          boldEnd="PIONEER?"
-          text2="ARE YOU A FUTURE."
-          text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
-        />
-        <Constilation callToActionHref="/" callToActionText="APPLY NOW!" />
-        <HeroText />
-        <ExplainingText
-          boldEnd="PIONEER?"
-          text2="ARE YOU A FUTURE."
-          text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
-        />
-        <Constilation />
-        <SpacesCardContainer />
+      <main className="flex justify-center">
+        <div className="w-3/4">
+          <NavBar />
+          <HeroText />
+          <ExplainingText
+            boldEnd="PIONEER?"
+            text2="ARE YOU A FUTURE."
+            text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
+          />
+          <Constilation callToActionHref="/" callToActionText="APPLY NOW!" />
+          <HeroText />
+          <ExplainingText
+            boldEnd="PIONEER?"
+            text2="ARE YOU A FUTURE."
+            text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
+          />
+          <Constilation />
+          <SpacesCardContainer />
+        </div>
       </main>
       <Footer />
     </>
