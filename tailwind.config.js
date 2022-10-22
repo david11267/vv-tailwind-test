@@ -4,8 +4,10 @@ module.exports = {
   theme: {
     fontFamily: {
       GTAmericaExpandedRegular: ["GT America Expanded", "sans-serif"],
-      FuzzyBubble: ["Fuzzy Bubbles", "cursive"],
       GtAmericaCompressed: ["GT America Compressed", "sans-serif"],
+      GtAmericaMono: ["GT America Mono", "sans-serif"],
+      GtAmerica: ["GT America", "sans-serif"],
+      GtAmericaExpandedBlack: ["GT America Expanded Black", "sans-serif"],
     },
     extend: {},
   },
