@@ -24,7 +24,7 @@ function FullNavBar() {
 }
 function MobileNavBar() {
   return (
-    <a className="flex m-2 text-2xl underline" href="">
+    <a className="flex mt-2 text-2xl underline" href="">
       MENU
     </a>
   );
@@ -36,8 +36,8 @@ export default function NavBar() {
   return (
     <div>
       <div>
-        <div className=" flex justify-between mb-40">
-          <Icon className="h-20" src="https://hypermedia.varmeverket.com/logo.svg" alt="logo" />
+        <div className=" flex justify-between mt-4 mb-40 ">
+          <Icon className="sm:h-20 md:h-15 lg:h-15 xl:h-20 2xl:h-20 h-14" src="https://hypermedia.varmeverket.com/logo.svg" alt="logo" />
           <div>{size.width > 1000 ? <FullNavBar /> : <MobileNavBar />}</div>
         </div>
       </div>

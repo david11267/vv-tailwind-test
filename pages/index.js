@@ -18,27 +18,37 @@ export default function Home() {
   return (
     <>
       <BgSwirlVideo source="https://hypermedia.varmeverket.com/39.mp4" />
-
-      <main className="flex justify-center">
-        <div className="w-3/4">
+      <div className="flex justify-center">
+        <div className="w-5/6">
           <NavBar />
-          <HeroText />
-          <ExplainingText
-            boldEnd="PIONEER?"
-            text2="ARE YOU A FUTURE."
-            text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
-          />
-          <Constilation callToActionHref="/" callToActionText="APPLY NOW!" />
-          <HeroText />
-          <ExplainingText
-            boldEnd="PIONEER?"
-            text2="ARE YOU A FUTURE."
-            text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
-          />
-          <Constilation callToActionHrf="www.google.se" callToActionText="Hej " />
-          <SpacesCardContainer />
+
+          <main className="flex justify-center">
+            <div className="w-5/6 sm:w-full md:w-full lg:w-5/6 xl:w-4/5 2xl:w-2/4">
+              <HeroText />
+              <ExplainingText
+                boldEnd="PIONEER?"
+                text2="ARE YOU A FUTURE."
+                text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
+              />
+              <Constilation
+                callToActionHref="/"
+                callToActionText="APPLY NOW!"
+              />
+              <HeroText />
+              <ExplainingText
+                boldEnd="PIONEER?"
+                text2="ARE YOU A FUTURE."
+                text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
+              />
+              <Constilation
+                callToActionHrf="www.google.se"
+                callToActionText="Hej "
+              />
+              <SpacesCardContainer />
+            </div>
+          </main>
         </div>
-      </main>
+      </div>
       <Footer />
     </>
   );

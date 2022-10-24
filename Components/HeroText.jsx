@@ -4,9 +4,9 @@ export default class HeroText extends Component {
   render() {
     return (
       <div className="flex justify-center mb-80">
-        <div className="text-center flex sm:text-3xl md:text-4xl xl:text-6xl text-xl">
+        <div className="text-center flex sm:text-3xl md:text-5xl xl:text-6xl text-xl">
           <span className=" font-GTAmericaExpandedRegular">PIONEERS.</span>
-          <span className="font-GTAmericaExpandedBlack ">TOGETHER.</span>
+          <span className="font-GtAmericaExpandedBlack">TOGETHER.</span>
         </div>
       </div>
     );
