@@ -52,7 +52,7 @@ export default function Home() {
                 imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
                 callToActionText="BOOK A SPACE"
                 headerText1="TILL"
-                headerText2="VERKET"
+                headerText2="VERKETt"
                 textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
               />
               <SpacesCardContainer />
