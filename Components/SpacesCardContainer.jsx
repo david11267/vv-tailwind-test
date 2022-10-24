@@ -10,7 +10,11 @@ export default class SpacesCardContainer extends Component {
             <span className="text-4xl">OUR.</span>
             <span className="text-4xl font-bold">SPACES.</span>
           </div>
-          <div className="flex justify-center flex-wrap mb-80 max-w-4xl">
+
+
+
+
+          <div className=" grid 2xl:grid-cols-5 xl:grid-cols-5 lg:grid-cols-5 gap-10 md:grid-cols-2 sm:grid-cols-2 grid-cols-2">
             <SpaceCard indexNr="#001" bigHeader="VV" littleHeader="Värmeverket" tinyText="template" />
             <SpaceCard indexNr="#001" bigHeader="VV" littleHeader="Värmeverket" tinyText="template" />
             <SpaceCard indexNr="#001" bigHeader="VV" littleHeader="Värmeverket" tinyText="template" />
@@ -21,6 +25,8 @@ export default class SpacesCardContainer extends Component {
             <SpaceCard indexNr="#001" bigHeader="VV" littleHeader="Värmeverket" tinyText="template" />
             <SpaceCard indexNr="#001" bigHeader="VV" littleHeader="Värmeverket" tinyText="template" />
             <SpaceCard indexNr="#001" bigHeader="VV" littleHeader="Värmeverket" tinyText="template" />
+
+
           </div>
         </div>
       </div>

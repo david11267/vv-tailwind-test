@@ -5,11 +5,10 @@ export default class HeaderImageNextPrev extends Component {
     return (
       <div className="flex flex-row-reverse   ">
         <div className=" block  ">
-          <div className="relative ">
-            {" "}
-            {/* translate-y-1/2 */}
-            <h1 className="text-5xl font-thin">POWERD.BY</h1>
-            <h1 className="text-5xl font-bold">VÄRMEVERKET.</h1>
+          <div className={this.props.classNameTextDiv}>
+
+            <h1 className="text-5xl font-thin">{this.props.header1}</h1>
+            <h1 className="text-5xl font-bold">{this.props.header2}</h1>
           </div>
           <div /* className="ml-20" */>
             <img width={this.props.imageWidth} src={this.props.src} alt={this.props.alt} />

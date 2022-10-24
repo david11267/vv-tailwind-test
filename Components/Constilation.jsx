@@ -4,53 +4,58 @@ import CallToActionLink from "./CallToActionLink";
 import HeaderImageNextPrev from "./HeaderImageNextPrev";
 import { useWindowSize } from "../hooks/useWindowSize";
 
-function FullSize({ callToActionHrf, callToActionText }) {
+function FullSize({ callToActionHrf, callToActionText, imageSrc, headerText1, headerText2, textParagraph, imageHeader1, imageHeader2 }) {
   return (
     <div className="mt-20 mb-80">
       <div className="flex flex-row justify-center">
         <div className="mt-28 mr-20">
           <HeaderAndText
-            text1="VÄRMEVERKET"
-            text2="VÄRMEVERKET"
-            text3="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has ."
+            text1={headerText1}
+            text2={headerText2}
+            text3={textParagraph}
           />
 
           <CallToActionLink href={callToActionHrf} text={callToActionText} />
         </div>
         <div>
           <HeaderImageNextPrev
-            src="https://media.gq-magazine.co.uk/photos/5d13a04bb744d364a425653b/1:1/w_1280,h_1280,c_limit/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg"
+            src={imageSrc}
             alt="image"
             prevText="&#60;/PREVIOUS"
             nextText="NEXT/&#62;"
             prevHref="/"
             nextHref="/"
             imageWidth="450"
+            classNameTextDiv="relative translate-y-1/2"
+            header1={imageHeader1}
+            header2={imageHeader2}
           />
         </div>
       </div>
     </div>
   );
 }
-function Mobile({ callToActionHrf, callToActionText }) {
+function Mobile({ callToActionHrf, callToActionText, imageSrc, headerText1, headerText2, textParagraph, imageHeader1, imageHeader2 }) {
   return (
     <div className="mt-20 mb-80">
       <div className="flex flex-row justify-center">
         <HeaderImageNextPrev
-          src="https://media.gq-magazine.co.uk/photos/5d13a04bb744d364a425653b/1:1/w_1280,h_1280,c_limit/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg"
+          src={imageSrc}
           alt="image"
           prevText="&#60;/PREVIOUS"
           nextText="NEXT/&#62;"
           prevHref="/"
           nextHref="/"
           imageWidth="450"
+          header1={imageHeader1}
+          header2={imageHeader2}
         />
       </div>
       <div className=" mt-8 flex justify-center">
         <HeaderAndText
-          text1="Till"
-          text2="VERKET"
-          text3="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has ."
+          text1={headerText1}
+          text2={headerText2}
+          text3={textParagraph}
         />
       </div>
       <div className="flex justify-center">
