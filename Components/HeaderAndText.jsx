@@ -4,9 +4,9 @@ export default class headerAndText extends Component {
   render() {
     return (
       <div className=" w-80 block">
-        <div>
-          <span className="text-2xl font-thin">{this.props.text1}</span>
-          <span className="text-2xl ont-bold">{this.props.text2}</span>
+        <div className="font-">
+          <span className="text-3xl font-thin">{this.props.text1}</span>
+          <span className="text-3xl font-bold">{this.props.text2}</span>
         </div>
         <p>{this.props.text3}</p>
       </div>
