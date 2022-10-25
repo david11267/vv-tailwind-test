@@ -22,6 +22,10 @@
   font-family: "GT America Mono";
   src: url("../public/Fonts/GTAmerica/WateredDown/GTAmericaMonoRegular.otf");
 }
+@font-face {
+  font-family: "GT America Extended Medium";
+  src: url("../public/Fonts/GTAmerica/GTAmericaExtendedMedium.otf");
+}
 
 html,
 body {

@@ -26,7 +26,7 @@ function FullSize({ callToActionHrf, callToActionText, imageSrc, headerText1, he
             prevHref="/"
             nextHref="/"
             imageWidth="450"
-            classNameTextDiv="relative translate-y-1/2"
+            classNameTextDiv="relative translate-y-1/2 -translate-x-24"
             header1={imageHeader1}
             header2={imageHeader2}
           />
@@ -37,8 +37,8 @@ function FullSize({ callToActionHrf, callToActionText, imageSrc, headerText1, he
 }
 function Mobile({ callToActionHrf, callToActionText, imageSrc, headerText1, headerText2, textParagraph, imageHeader1, imageHeader2 }) {
   return (
-    <div className="mt-20 mb-80">
-      <div className="flex flex-row justify-center">
+    <div className="mt-20 mb-80 flex flex-col justify-center">
+      <div className="flex flex-row">
         <HeaderImageNextPrev
           src={imageSrc}
           alt="image"
