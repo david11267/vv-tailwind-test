@@ -6,7 +6,7 @@ export default class SpacesCardContainer extends Component {
     return (
       <div className="flex justify-center mb-20">
         <div className="flex flex-col ">
-          <div className="flex flex-col mb-10">
+          <div id="spaces" className="flex flex-col mb-10">
             <span className="text-4xl">OUR.</span>
             <span className="text-4xl font-bold">SPACES.</span>
           </div>

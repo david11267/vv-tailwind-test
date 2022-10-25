@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <BgSwirlVideo source="https://hypermedia.varmeverket.com/73_at_24s.mp4" />
       <div className="flex justify-center">
-        <div className="w-5/6">
+        <div className="w-5/6 ">
           <NavBar />
 
           <main className="flex justify-center">
@@ -30,16 +30,18 @@ export default function Home() {
                 text2="ARE YOU A FUTURE."
                 text="VÄRMEVEVERKET IS A CREATIVE SPACE THAT WORKS WITH PIONEER PROJECTS WHICH ARE POSITIVE TO PEOPLE."
               />
-              <Constilation
-                imageHeader1="POWERD.BY"
-                imageHeader2="VÄRMEVEVERKET"
-                imageSrc="https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg"
-                callToActionHref="/"
-                callToActionText="APPLY NOW!"
-                headerText1="SILLY."
-                headerText2="LABS."
-                textParagraph="Silly Labs is a creative collective of minds founded bt Eren Saygin and Kris Adamah with ethos coming from their background in music."
-              />
+              <div id="community">
+                <Constilation
+                  imageHeader1="POWERD.BY"
+                  imageHeader2="VÄRMEVEVERKET"
+                  imageSrc="https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg"
+                  callToActionHref="/"
+                  callToActionText="APPLY NOW!"
+                  headerText1="SILLY."
+                  headerText2="LABS."
+                  textParagraph="Silly Labs is a creative collective of minds founded bt Eren Saygin and Kris Adamah with ethos coming from their background in music."
+                />
+              </div>
               <HeroText text1="VÄRME" text2="VERKET" />
               <ExplainingText
                 boldEnd="PIONEER?"

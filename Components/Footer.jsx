@@ -6,7 +6,7 @@ export default class Footer extends Component {
       <footer className=' text-black bg-white flex justify-center'>
         <div className='mt-8 w-2/4'>
           <div>
-            <p className='mb-4' >Contact</p>
+            <p id="contact" className='mb-4' >Contact</p>
             <h1>
               <span>KEEP.IN.</span><span>TOUCH.</span>
             </h1>

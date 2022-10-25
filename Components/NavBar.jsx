@@ -6,18 +6,18 @@ function FullNavBar() {
   return (
     <ul className=" font mt-7 flex space-x-4">
       <li>
-        <a className="" href="">
+        <a className="#modalForm" href="">
           APPLY NOW
         </a>
       </li>
       <li>
-        <a href="spaces">SPACES</a>
+        <a href="#spaces">SPACES</a>
       </li>
       <li>
-        <a href="community">COMMUNITY</a>
+        <a href="#community">COMMUNITY</a>
       </li>
       <li>
-        <a href="contact">CONTACT</a>
+        <a href="#contact">CONTACT</a>
       </li>
     </ul>
   );
