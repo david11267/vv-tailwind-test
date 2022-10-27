@@ -63,22 +63,21 @@ h1 {
 }
 
 .spaceCardAnimation {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab), black;
   background-size: 500% 500%;
   background-blend-mode: overlay;
   background-position: 0% 50%;
-  transition: 2s;
+  transition: 0.5s;
 
   fill-opacity: 10px;
   filter: blur(10px);
-  filter: brightness(400%);
+  filter: brightness(200%);
 }
 .spaceCardAnimation:hover {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 500% 500%;
   animation: gradient 3s ease-in infinite;
-  transition: 300ms;
-  transition-delay: 200ms;
+  transition: 100ms;
+  box-shadow: rgba(255, 255, 255, 0.592) 0px 0px 16px 0px;
   filter: none;
 }
 
