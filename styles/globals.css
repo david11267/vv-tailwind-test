@@ -63,7 +63,8 @@ h1 {
 }
 
 .spaceCardAnimation {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab), black;
+  background: linear-gradient(-45deg, #ee7652, #e73c7e, #23a5d5, #23d5ab28),
+    black;
   background-size: 500% 500%;
   background-blend-mode: overlay;
   background-position: 0% 50%;
