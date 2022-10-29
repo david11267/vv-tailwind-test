@@ -1,17 +1,19 @@
-import React, { Component } from "react";
-export default class SpaceCard extends Component {
-  render() {
-    return (
-      <div className=" m-1 spaceCardAnimation h-fit w-fit border border-white ">
-        <div className="w-40 h-44">
-          <span className="text-xs">{this.props.indexNr}</span>
-          <div className=" mt-4 text-center w-full align-middle">
-            <h2 className="text-3xl">{this.props.bigHeader}</h2>
-            <p className="">{this.props.littleHeader}</p>
-            <p className=" mt-3 text-xs">{this.props.tinyText}</p>
-          </div>
-        </div>
+import React from "react";
+
+const SpaceCard = ({ number, header, subHeader, info }) => {
+  return (
+    <div
+      style={{ aspectRatio: "9 / 10" }}
+      className="p-4 relative w-full h-full spaceCardAnimation border border-white grid place-items-center"
+    >
+      <span className="text-xs absolute top-2 left-2">{number}</span>
+      <div className="text-center">
+        <h2 className="md:text-6xl text-5xl font-semibold">{header}</h2>
+        <p className="text-md md:text-xl mt-2">{subHeader}</p>
+        <p className="text-xs md:text-base font-thin mt-4">{info}</p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default SpaceCard;

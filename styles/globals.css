@@ -33,6 +33,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -63,18 +64,30 @@ h1 {
 }
 
 .spaceCardAnimation {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab), black;
+  background: linear-gradient(
+      -45deg,
+      #ee7752d0,
+      #e73c7ed0,
+      transparent,
+      #23d5abd0
+    ),
+    transparent;
   background-size: 500% 500%;
   background-blend-mode: overlay;
   background-position: 0% 50%;
   transition: 2s;
-
   fill-opacity: 10px;
   filter: blur(10px);
-  filter: brightness(400%);
+  filter: brightness(200%);
 }
 .spaceCardAnimation:hover {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(
+    -45deg,
+    #ee7752d0,
+    #e73c7ed0,
+    #23a6d5d0,
+    #23d5abd0
+  );
   background-size: 500% 500%;
   animation: gradient 3s ease-in infinite;
   transition: 300ms;
@@ -85,20 +98,31 @@ h1 {
 .scroll-text-container {
   overflow: hidden;
 }
-.scroll-text {
-  display: block;
-  animation-name: scrollingText;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollingText 20s linear infinite;
+  text-decoration: underline;
+}
+
+.marquee2 span {
+  animation-delay: 10s;
 }
 
 @keyframes scrollingText {
   0% {
-    transform: translate(-100%, 0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate(100%);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
