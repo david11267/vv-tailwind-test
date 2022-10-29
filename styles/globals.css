@@ -90,8 +90,8 @@ h1 {
   );
   background-size: 500% 500%;
   animation: gradient 3s ease-in infinite;
-  transition: 300ms;
-  transition-delay: 200ms;
+  transition: 100ms;
+  box-shadow: rgba(255, 255, 255, 0.592) 0px 0px 16px 0px;
   filter: none;
 }
 
