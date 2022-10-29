@@ -33,8 +33,8 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 .video-bg {
@@ -63,6 +63,7 @@ h1 {
 }
 
 .spaceCardAnimation {
+  background: linear-gradient(-45deg, #ee7652, #e73c7e, #23a5d5, #23d5ab28), black;
   background-size: 500% 500%;
   background-blend-mode: overlay;
   background-position: 0% 50%;
