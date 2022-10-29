@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class headerAndText extends Component {
-  render() {
-    return (
-      <div className=" w-80 block">
-        <div className="font-">
-          <span className="text-3xl font-thin">{this.props.text1}</span>
-          <span className="text-3xl font-bold">{this.props.text2}</span>
-        </div>
-        <p>{this.props.text3}</p>
+const HeaderAndText = ({ text1, text2, text3 }) => {
+  return (
+    <>
+      <div className="text-4xl mb-4 font-GtAmericaCompressed">
+        <span className="font-thin">{text1}</span>
+        <span className="font-bold">{text2}</span>
       </div>
-    );
-  }
-}
+      <p className="font-GtAmericaMono text-xs sm:text-base w-1/2">{text3}</p>
+    </>
+  );
+};
+
+export default HeaderAndText;
