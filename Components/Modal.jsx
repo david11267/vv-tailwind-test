@@ -90,7 +90,7 @@ const Modal = () => {
             name="additionalInfo"
             id="additionalInfo"
             cols="30"
-            rows="10"
+            rows="5"
           />
         </div>
       </div>

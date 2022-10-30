@@ -182,7 +182,7 @@ export default function Home() {
                 />
               </div>
               <div className={layoutClass + " mb-40"}>
-                {/* <Constilation
+                <Constilation
                   imageHeader1="EXPLORE.OUR."
                   imageHeader2="SPACES."
                   callToActionText="BOOK A SPACE"
@@ -193,14 +193,14 @@ export default function Home() {
                   setItem={setCurrentData2}
                   items={exploreOurPlaceholderData}
                   {...exploreOurPlaceholderData[currentData2.index]}
-                /> */}
+                />
                 <div className="mt-20">
                   <SpacesCardContainer />
                 </div>
               </div>
               <ScrollingText text="BOOK A SPACE!" />
               <div className={layoutClass + " mb-40"}>
-                {/* <Constilation
+                <Constilation
                   imageHeader1="MADE.AT."
                   imageHeader2="VÄRMEVERKET."
                   imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
@@ -211,7 +211,7 @@ export default function Home() {
                   setItem={setCurrentData3}
                   items={madeAtPlaceholderData}
                   {...madeAtPlaceholderData[currentData3.index]}
-                /> */}
+                />
               </div>
             </main>
             <Footer />
