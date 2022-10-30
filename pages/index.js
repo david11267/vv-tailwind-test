@@ -7,6 +7,9 @@ import ScrollingText from "../Components/ScrollingText";
 import BgSwirlVideo from "../Components/BgSwirlVideo";
 import ExplainingText from "../Components/ExplainingText";
 import SpacesCardContainer from "../Components/SpacesCardContainer";
+import Modal from "../Components/Modal";
+import { useModalContext } from "../Components/ModalContextProvider";
+import { AnimatePresence, motion } from "framer-motion";
 
 const layoutClass = "p-8 m-auto max-w-7xl";
 
@@ -68,6 +71,8 @@ const madeAtPlaceholderData = [
 ];
 
 export default function Home() {
+  const { isOpen } = useModalContext();
+
   const [currentData1, setCurrentData1] = useState({
     maxLength: poweredByPlaceholderData.length - 1,
     index: 0,
@@ -85,86 +90,110 @@ export default function Home() {
     <>
       <BgSwirlVideo source="https://hypermedia.varmeverket.com/73_at_24s.mp4" />
       <NavBar />
-      <main>
-        <div className="md:-mt-40 -mt-32">
-          <HeroText
-            rotatingWordList={["Family", "Friends", "Work", "Fun", "Pioneers"]}
-            rightText="TOGETHER"
-          />
-        </div>
-        <div className={layoutClass + " mb-40"}>
-          <ExplainingText
-            topOffset={350}
-            prompt={{
-              left: "ARE YOU A FUTURE.",
-              right: "PIONEER?",
-            }}
-            rows={[
-              "VARMEVERKET IS A CREATIVE",
-              "SPACE THAT WORKS WITH",
-              "PIONEER PROJECTS WHICH",
-              "ARE POSITIVE TO PEOPLE",
-            ]}
-          />
-        </div>
-        <div className={layoutClass} id="community">
-          <Constilation
-            imageHeader1="POWERED.BY."
-            imageHeader2="VÄRMEVERKET."
-            callToActionHref="/"
-            callToActionText="APPLY NOW!"
-            setItem={setCurrentData1}
-            {...poweredByPlaceholderData[currentData1.index]}
-          />
-        </div>
-        <HeroText
-          rotatingWordList={["Värme", "Musik", "Konst", "Podd"]}
-          rightText="VERKET"
-          disableSeparator
-        />
-        <div className={layoutClass + " mb-40"}>
-          <ExplainingText
-            topOffset={350}
-            rows={[
-              "VÄRMEVEVERKET FOCUSES ON",
-              "EDUCATION, CREATION &",
-              "INNOVATION WITHIN ART AND",
-              "CULTURE.",
-            ]}
-          />
-        </div>
-        <div className={layoutClass + " mb-40"}>
-          <Constilation
-            imageHeader1="EXPLORE.OUR."
-            imageHeader2="SPACES."
-            callToActionText="BOOK A SPACE"
-            imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
-            headerText1="TILL"
-            headerText2="VERKET"
-            textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
-            setItem={setCurrentData2}
-            {...exploreOurPlaceholderData[currentData2.index]}
-          />
-          <div className="mt-20">
-            <SpacesCardContainer />
-          </div>
-        </div>
-        <ScrollingText text="BOOK A SPACE!" />
-        <div className={layoutClass + " mb-40"}>
-          <Constilation
-            imageHeader1="MADE.AT."
-            imageHeader2="VÄRMEVERKET."
-            imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
-            callToActionText="BOOK A SPACE"
-            headerText1="H"
-            headerText2="&#38;M"
-            textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
-            setItem={setCurrentData3}
-            {...madeAtPlaceholderData[currentData3.index]}
-          />
-        </div>
-      </main>
-      <Footer />
+      <AnimatePresence mode="wait">
+        {isOpen ? (
+          <motion.div
+            key="modal"
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <Modal />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="main"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <main>
+              <div className="md:-mt-40 -mt-32">
+                <HeroText
+                  rotatingWordList={[
+                    "Family",
+                    "Friends",
+                    "Work",
+                    "Fun",
+                    "Pioneers",
+                  ]}
+                  rightText="TOGETHER"
+                />
+              </div>
+              <div className={layoutClass + " mb-40"}>
+                <ExplainingText
+                  topOffset={350}
+                  prompt={{
+                    left: "ARE YOU A FUTURE.",
+                    right: "PIONEER?",
+                  }}
+                  rows={[
+                    "VARMEVERKET IS A CREATIVE",
+                    "SPACE THAT WORKS WITH",
+                    "PIONEER PROJECTS WHICH",
+                    "ARE POSITIVE TO PEOPLE",
+                  ]}
+                />
+              </div>
+              <div className={layoutClass} id="community">
+                <Constilation
+                  imageHeader1="POWERED.BY."
+                  imageHeader2="VÄRMEVERKET."
+                  callToActionHref="/"
+                  callToActionText="APPLY NOW!"
+                  setItem={setCurrentData1}
+                  {...poweredByPlaceholderData[currentData1.index]}
+                />
+              </div>
+              <HeroText
+                rotatingWordList={["Värme", "Musik", "Konst", "Podd"]}
+                rightText="VERKET"
+                disableSeparator
+              />
+              <div className={layoutClass + " mb-40"}>
+                <ExplainingText
+                  topOffset={350}
+                  rows={[
+                    "VÄRMEVEVERKET FOCUSES ON",
+                    "EDUCATION, CREATION &",
+                    "INNOVATION WITHIN ART AND",
+                    "CULTURE.",
+                  ]}
+                />
+              </div>
+              <div className={layoutClass + " mb-40"}>
+                <Constilation
+                  imageHeader1="EXPLORE.OUR."
+                  imageHeader2="SPACES."
+                  callToActionText="BOOK A SPACE"
+                  imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
+                  headerText1="TILL"
+                  headerText2="VERKET"
+                  textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
+                  setItem={setCurrentData2}
+                  {...exploreOurPlaceholderData[currentData2.index]}
+                />
+                <div className="mt-20">
+                  <SpacesCardContainer />
+                </div>
+              </div>
+              <ScrollingText text="BOOK A SPACE!" />
+              <div className={layoutClass + " mb-40"}>
+                <Constilation
+                  imageHeader1="MADE.AT."
+                  imageHeader2="VÄRMEVERKET."
+                  imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
+                  callToActionText="BOOK A SPACE"
+                  headerText1="H"
+                  headerText2="&#38;M"
+                  textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
+                  setItem={setCurrentData3}
+                  {...madeAtPlaceholderData[currentData3.index]}
+                />
+              </div>
+            </main>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

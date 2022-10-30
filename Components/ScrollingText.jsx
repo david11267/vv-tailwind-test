@@ -1,9 +1,15 @@
 import React from "react";
+import { useModalContext } from "./ModalContextProvider";
 
 const ScrollingText = ({ text }) => {
+  const { setIsOpen } = useModalContext();
+
   return (
-    <h1 className="max-w-full font-bold text-6xl lg:text-[5vw]">
-      <a className="relative block h-64 whitespace-nowrap">
+    <div className="max-w-full font-bold text-6xl lg:text-[5vw]">
+      <a
+        onClick={() => setIsOpen(true)}
+        className="cursor-pointer relative block h-32 whitespace-nowrap"
+      >
         <p className="marquee">
           <span className="block">
             {text}_-_{text}_-_{text}_-_{text}_-_
@@ -15,7 +21,7 @@ const ScrollingText = ({ text }) => {
           </span>
         </p>
       </a>
-    </h1>
+    </div>
   );
 };
 

@@ -1,11 +1,12 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useModalContext } from "./ModalContextProvider";
 
 const boxVariant = {
   visible: {
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 0.05,
     },
   },
 };
@@ -13,9 +14,13 @@ const boxVariant = {
 const listVariant = {
   hidden: {
     y: 40,
+    scaleY: 0.2,
+    opacity: 0,
   },
   visible: {
     y: 0,
+    scaleY: 1,
+    opacity: 1,
   },
 };
 
@@ -29,11 +34,13 @@ const lineVariant = {
 };
 
 const CallToActionLink = ({ href, text }) => {
+  const { setIsOpen } = useModalContext();
+
   return (
     <div className="inline-block mt-5 md:mt-10">
       <a
         className="cursor-pointer font-bold sm:text-2xl xl:text-5xl text-2xl"
-        href={href}
+        onClick={() => setIsOpen(true)}
       >
         <motion.div
           className="inline-block"
@@ -50,7 +57,7 @@ const CallToActionLink = ({ href, text }) => {
                 style={{
                   marginRight: text.split(" ").length - 1 === index ? 0 : 12,
                 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.25 }}
                 variants={listVariant}
               >
                 {word}
@@ -62,7 +69,7 @@ const CallToActionLink = ({ href, text }) => {
             whileInView="visible"
             viewport={{ once: false }}
             variants={lineVariant}
-            transition={{ delay: 0.6, duration: 4.2, type: "tween" }}
+            transition={{ delay: 0.5, duration: 4, type: "tween" }}
             className="h-0.5 bg-white"
           />
         </motion.div>

@@ -15,37 +15,37 @@ const data = [
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
     subHeader: "Värmeverket",
-    info: "template",
+    info: "Title? Work? What?",
   },
   {
     header: "VV",
