@@ -27,11 +27,33 @@
   src: url("../public/Fonts/GTAmerica/GTAmericaExtendedMedium.otf");
 }
 
-html,
-body {
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
   scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
   padding: 0;
+  height: 100vh;
   margin: 0;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -80,6 +102,7 @@ h1 {
   filter: blur(10px);
   filter: brightness(200%);
 }
+
 .spaceCardAnimation:hover {
   background: linear-gradient(
     -45deg,

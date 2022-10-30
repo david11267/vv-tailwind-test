@@ -15,16 +15,31 @@ const layoutClass = "p-8 m-auto max-w-7xl";
 
 const poweredByPlaceholderData = [
   {
-    imageSrc:
-      "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
+    srcList: [
+      "https://images.unsplash.com/photo-1666887360361-d4e8487f0026?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1667094793050-e3c15d0eea36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1666831268439-376e34c4de0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    ],
     headerText1: "SILLY.",
     headerText2: "LABS.",
     textParagraph:
       "Silly Labs is a creative collective of minds founded bt Eren Saygin and Kris Adamah with ethos coming from their background in music.",
   },
   {
-    imageSrc:
+    srcList: [
+      "https://images.unsplash.com/photo-1666831268439-376e34c4de0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1667118715166-ae0c682ed6f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    ],
+    headerText1: "TEST.",
+    headerText2: "LABS.",
+    textParagraph:
+      "Test labs is a creative collective of minds founded bt Eren Saygin and Kris Adamah with ethos coming from their background in music.",
+  },
+  {
+    srcList: [
       "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
+      "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
+    ],
     headerText1: "TEST.",
     headerText2: "LABS.",
     textParagraph:
@@ -34,16 +49,20 @@ const poweredByPlaceholderData = [
 
 const exploreOurPlaceholderData = [
   {
-    imageSrc:
+    srcList: [
+      "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
       "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
+    ],
     headerText1: "TILL",
     headerText2: "VERKET",
     textParagraph:
       "The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless.",
   },
   {
-    imageSrc:
+    srcList: [
       "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
+      "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
+    ],
     headerText1: "TEST.",
     headerText2: "LABS.",
     textParagraph:
@@ -53,16 +72,20 @@ const exploreOurPlaceholderData = [
 
 const madeAtPlaceholderData = [
   {
-    imageSrc:
+    srcList: [
+      "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
       "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
+    ],
     headerText1: "TILL",
     headerText2: "VERKET",
     textParagraph:
       "The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless.",
   },
   {
-    imageSrc:
+    srcList: [
       "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
+      "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
+    ],
     headerText1: "TEST.",
     headerText2: "LABS.",
     textParagraph:
@@ -120,7 +143,6 @@ export default function Home() {
               </div>
               <div className={layoutClass + " mb-40"}>
                 <ExplainingText
-                  topOffset={350}
                   prompt={{
                     left: "ARE YOU A FUTURE.",
                     right: "PIONEER?",
@@ -140,6 +162,7 @@ export default function Home() {
                   callToActionHref="/"
                   callToActionText="APPLY NOW!"
                   setItem={setCurrentData1}
+                  items={poweredByPlaceholderData}
                   {...poweredByPlaceholderData[currentData1.index]}
                 />
               </div>
@@ -150,7 +173,6 @@ export default function Home() {
               />
               <div className={layoutClass + " mb-40"}>
                 <ExplainingText
-                  topOffset={350}
                   rows={[
                     "VÄRMEVEVERKET FOCUSES ON",
                     "EDUCATION, CREATION &",
@@ -160,7 +182,7 @@ export default function Home() {
                 />
               </div>
               <div className={layoutClass + " mb-40"}>
-                <Constilation
+                {/* <Constilation
                   imageHeader1="EXPLORE.OUR."
                   imageHeader2="SPACES."
                   callToActionText="BOOK A SPACE"
@@ -169,15 +191,16 @@ export default function Home() {
                   headerText2="VERKET"
                   textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
                   setItem={setCurrentData2}
+                  items={exploreOurPlaceholderData}
                   {...exploreOurPlaceholderData[currentData2.index]}
-                />
+                /> */}
                 <div className="mt-20">
                   <SpacesCardContainer />
                 </div>
               </div>
               <ScrollingText text="BOOK A SPACE!" />
               <div className={layoutClass + " mb-40"}>
-                <Constilation
+                {/* <Constilation
                   imageHeader1="MADE.AT."
                   imageHeader2="VÄRMEVERKET."
                   imageSrc="https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp"
@@ -186,8 +209,9 @@ export default function Home() {
                   headerText2="&#38;M"
                   textParagraph="The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless."
                   setItem={setCurrentData3}
+                  items={madeAtPlaceholderData}
                   {...madeAtPlaceholderData[currentData3.index]}
-                />
+                /> */}
               </div>
             </main>
             <Footer />

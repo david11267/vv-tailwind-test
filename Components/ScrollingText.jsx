@@ -5,7 +5,7 @@ const ScrollingText = ({ text }) => {
   const { setIsOpen } = useModalContext();
 
   return (
-    <div className="max-w-full font-bold text-6xl lg:text-[5vw]">
+    <div className="max-w-full overflow-hidden font-bold text-6xl lg:text-[5vw]">
       <a
         onClick={() => setIsOpen(true)}
         className="cursor-pointer relative block h-32 whitespace-nowrap"

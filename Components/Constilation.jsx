@@ -8,13 +8,14 @@ import { useWindowSize } from "../hooks/useWindowSize";
 function FullSize({
   callToActionHrf,
   callToActionText,
-  imageSrc,
+  srcList,
   headerText1,
   headerText2,
   textParagraph,
   imageHeader1,
   imageHeader2,
   setItem,
+  items,
 }) {
   return (
     <div className="mt-20">
@@ -46,7 +47,8 @@ function FullSize({
         </div>
         <div>
           <HeaderImageNextPrev
-            src={imageSrc}
+            items={items}
+            srcList={srcList}
             alt="image"
             prevText="&#60;/PREVIOUS"
             nextText="NEXT/&#62;"
@@ -67,19 +69,21 @@ function FullSize({
 function Mobile({
   callToActionHrf,
   callToActionText,
-  imageSrc,
+  srcList,
   headerText1,
   headerText2,
   textParagraph,
   imageHeader1,
   imageHeader2,
   setItem,
+  items,
 }) {
   return (
     <div className="mt-20 flex flex-col justify-center">
       <div className="flex lg:flex-row flex-col">
         <HeaderImageNextPrev
-          src={imageSrc}
+          items={items}
+          srcList={srcList}
           alt="image"
           prevText="&#60;/PREVIOUS"
           nextText="NEXT/&#62;"

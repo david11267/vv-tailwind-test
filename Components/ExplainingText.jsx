@@ -6,7 +6,7 @@ const textClass = "text-black text-opacity-80";
 const textClassAbs =
   "absolute overflow-hidden whitespace-nowrap top-0 bottom-0 left-0";
 
-const ExplainingText = ({ rows, prompt, topOffset = 0 }) => {
+const ExplainingText = ({ rows, prompt }) => {
   const containerRef = useRef();
   const [scrollY, setScrollY] = useState(0);
 

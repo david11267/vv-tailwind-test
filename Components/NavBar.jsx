@@ -31,7 +31,7 @@ export default function NavBar() {
           alt="värmeverket"
         />
         {size.width > MENU_BREAKPOINT ? (
-          <ul className="text-lg ml-auto mt-7 flex justify-between gap-16">
+          <ul className="text-lg ml-auto flex items-center justify-between gap-16">
             <li className="whitespace-nowrap cursor-pointer">
               <a onClick={() => setIsOpen(true)}>APPLY NOW</a>
             </li>
