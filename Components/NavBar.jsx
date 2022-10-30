@@ -2,10 +2,12 @@ import { useWindowSize } from "../hooks/useWindowSize";
 import Icon from "./Icon";
 import useCollapse from "react-collapsed";
 import { useModalContext } from "./ModalContextProvider";
+import { useRouter } from "next/router";
 
 const MENU_BREAKPOINT = 1000;
 
 export default function NavBar() {
+  const router = useRouter();
   const { setIsOpen } = useModalContext();
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   const size = useWindowSize();
@@ -21,10 +23,12 @@ export default function NavBar() {
   return (
     <div className="p-8 max-w-7xl m-auto">
       <div className="flex mt-4">
-        <Icon
-          className="sm:h-20 md:h-15 lg:h-15 xl:h-20 2xl:h-20 h-14"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          onClick={() => router.push("/")}
+          className="cursor-pointer sm:h-20 md:h-15 lg:h-15 xl:h-20 2xl:h-20 h-14"
           src="https://hypermedia.varmeverket.com/logo.svg"
-          alt="logo"
+          alt="värmeverket"
         />
         {size.width > MENU_BREAKPOINT ? (
           <ul className="text-lg ml-auto mt-7 flex justify-between gap-16">
