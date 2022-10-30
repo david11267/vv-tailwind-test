@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useWindowSize } from "../hooks/useWindowSize";
 import Icon from "./Icon";
 import useCollapse from "react-collapsed";
@@ -10,12 +9,6 @@ export default function NavBar() {
   const { setIsOpen } = useModalContext();
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   const size = useWindowSize();
-
-  useEffect(() => {
-    if (size.width > MENU_BREAKPOINT) {
-      setIsOpen(false);
-    }
-  }, [size.width, setIsOpen]);
 
   const handleNavigate = (id) => {
     setIsOpen(false);
