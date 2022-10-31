@@ -69,7 +69,10 @@ const VerticalScrollItem = ({ srcList, index, currentIndex, cancelScroll }) => {
         {srcList.map((src, index) => (
           <div className="w-full h-full" key={index}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="w-full h-full object-cover" src={src} alt="" />
+            <video className="w-full h-full object-cover" poster={src} autoPlay muted loop >
+              <source src={src} />
+            </video >
+            {/* <img className="w-full h-full object-cover" src={src} alt="" /> */}
           </div>
         ))}
       </motion.div>
@@ -141,6 +144,7 @@ const HeaderImageNextPrev = ({
               <VerticalScrollItem
                 cancelScroll={cancelScroll}
                 srcList={item.srcList}
+                videoSrc={item.videoSrc}
                 key={index}
                 {...{ currentIndex, index }}
               />

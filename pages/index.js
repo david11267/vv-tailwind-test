@@ -16,10 +16,13 @@ const layoutClass = "p-8 m-auto max-w-7xl";
 const poweredByPlaceholderData = [
   {
     srcList: [
+      "https://hypermedia.varmeverket.com/39.mp4",
       "https://images.unsplash.com/photo-1666887360361-d4e8487f0026?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
       "https://images.unsplash.com/photo-1667094793050-e3c15d0eea36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
       "https://images.unsplash.com/photo-1666831268439-376e34c4de0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
     ],
+    videoSrc: "https://hypermedia.varmeverket.com/39.mp4",
+
     headerText1: "SILLY.",
     headerText2: "LABS.",
     textParagraph:
@@ -118,16 +121,14 @@ export default function Home() {
           <motion.div
             key="modal"
             initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+            animate={{ opacity: 1, y: 0 }}>
             <Modal />
           </motion.div>
         ) : (
           <motion.div
             key="main"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
+            animate={{ opacity: 1 }}>
             <main>
               <div className="md:-mt-40 -mt-32">
                 <HeroText

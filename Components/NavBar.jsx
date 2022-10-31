@@ -31,9 +31,11 @@ export default function NavBar() {
           alt="värmeverket"
         />
         {size.width > MENU_BREAKPOINT ? (
+
           <ul className="text-lg ml-auto flex items-center justify-between gap-16">
             <li className="whitespace-nowrap cursor-pointer">
-              <a onClick={() => setIsOpen(true)}>APPLY NOW</a>
+              <a onClick={() => setIsOpen(true)}>
+                APPLY NOW</a>
             </li>
             <li className="whitespace-nowrap cursor-pointer">
               <a onClick={() => handleNavigate("spaces")} href="#spaces">
@@ -104,6 +106,6 @@ export default function NavBar() {
           <a>TIKTOK</a>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
