@@ -3,14 +3,21 @@ import Icon from "./Icon";
 import useCollapse from "react-collapsed";
 import { useModalContext } from "./ModalContextProvider";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const MENU_BREAKPOINT = 1000;
 
 export default function NavBar() {
   const router = useRouter();
   const { setIsOpen } = useModalContext();
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+  const { getCollapseProps, getToggleProps, isExpanded, setExpanded } = useCollapse();
   const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width > MENU_BREAKPOINT) {
+      setExpanded(false);
+    }
+  }, [size.width]);
 
   const handleNavigate = (id) => {
     setIsOpen(false);
@@ -55,8 +62,7 @@ export default function NavBar() {
           <div
             className="header ml-auto underline text-xl place-self-end self-center"
             onMouseDown={() => !isExpanded && setIsOpen(false)}
-            {...getToggleProps()}
-          >
+            {...getToggleProps()}>
             {isExpanded ? "CLOSE" : "MENU"}
           </div>
         )}
@@ -65,11 +71,7 @@ export default function NavBar() {
         <div className="content text-left mt-24 mb-12 ">
           <ul className="font-GtAmericaExpandedBlack text-4xl ">
             <li className="mb-8">
-              <a
-                className="cursor-pointer hover:underline"
-                {...getToggleProps()}
-                onMouseDown={() => setIsOpen(true)}
-              >
+              <a className="cursor-pointer hover:underline" {...getToggleProps()} onMouseDown={() => setIsOpen(true)}>
                 APPLY
               </a>
             </li>
@@ -92,9 +94,7 @@ export default function NavBar() {
           <div>
             <a href="tel:+46 72 123 45 67"> +46 72 123 45 67</a>
             <br />
-            <a href="mailto: booking@varmeverket.com">
-              booking@varmeverket.com
-            </a>
+            <a href="mailto: booking@varmeverket.com">booking@varmeverket.com</a>
           </div>
         </div>
         <div className="flex space-x-4 underline text-sm">
