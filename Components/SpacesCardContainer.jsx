@@ -3,54 +3,54 @@ import SpaceCard from "./SpaceCard";
 
 const data = [
   {
-    header: "Pc",
-    subHeader: "Panncentralen",
-    info: "Title? Work? What?",
-  },
-  {
     header: "Mu",
     subHeader: "Musikverket",
+    info: "Music",
+  },
+  {
+    header: "Ti",
+    subHeader: "Tillverket",
+    info: "Prototyping",
+  },
+  {
+    header: "Pc",
+    subHeader: "Panncentralen",
+    info: "Space",
+  },
+  {
+    header: "Co",
+    subHeader: "Co",
     info: "Title? Work? What?",
   },
   {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
+    header: "Kv",
+    subHeader: "Kosntverket",
+    info: "Atelier",
   },
   {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
+    header: "Un",
+    subHeader: "Underverket",
+    info: "Space",
   },
   {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
+    header: "Po",
+    subHeader: "Poddverket",
+    info: "Podcast",
   },
   {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
+    header: "Da",
+    subHeader: "Dansverket",
+    info: "Dance",
   },
   {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
+    header: "Mv",
+    subHeader: "Mästerverket",
+    info: "Film",
   },
   {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
-  },
-  {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
-  },
-  {
-    header: "VV",
-    subHeader: "Värmeverket",
-    info: "Title? Work? What?",
+    header: "Bv",
+    subHeader: "Bildverket",
+    info: "Photo",
   },
 ];
 
