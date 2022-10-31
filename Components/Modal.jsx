@@ -23,6 +23,12 @@ const Modal = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     console.log(formValues);
+    const response = fetch("https://api.varmeverket.com/v3/forms/booking", {
+      body: JSON.stringify(formValues),
+      headers: {},
+      method: "POST",
+    });
+    setIsOpen(false);
   };
 
   const handleChange = (event) => {
@@ -30,6 +36,7 @@ const Modal = () => {
       ...values,
       [event.target.name]: event.target.value,
     }));
+
   };
 
   return (
