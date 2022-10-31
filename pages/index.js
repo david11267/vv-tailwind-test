@@ -20,6 +20,8 @@ const poweredByPlaceholderData = [
       "https://images.unsplash.com/photo-1667094793050-e3c15d0eea36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
       "https://images.unsplash.com/photo-1666831268439-376e34c4de0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
     ],
+    videoSrc: "https://hypermedia.varmeverket.com/39.mp4",
+
     headerText1: "SILLY.",
     headerText2: "LABS.",
     textParagraph:
@@ -49,24 +51,55 @@ const poweredByPlaceholderData = [
 
 const exploreOurPlaceholderData = [
   {
-    srcList: [
-      "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
-      "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
-    ],
+    srcList: ["https://hypermedia.varmeverket.com/hi-res/VV-TILLVERKET.mp4"],
     headerText1: "TILL",
     headerText2: "VERKET",
     textParagraph:
       "The space is decorated with a CNC printer, 3D printers, sewing machines and is a perfect place to work with everything from electronics to furniture and fashion, the possibilities are endless.",
   },
   {
-    srcList: [
-      "https://uploads-ssl.webflow.com/622762e08d276c4648e1fffa/624db36a933c69aaadcf901a_Group%201590.jpeg",
-      "https://www.akadeum.com/wp-content/uploads/2020/11/iStock-1224413537-scaled.jpg.webp",
-    ],
-    headerText1: "TEST.",
-    headerText2: "LABS.",
+    srcList: ["https://hypermedia.varmeverket.com/hi-res/VV-PODDVERKET-2.mp4"],
+    headerText1: "PODD",
+    headerText2: "VERKET",
     textParagraph:
-      "Test labs is a creative collective of minds founded bt Eren Saygin and Kris Adamah with ethos coming from their background in music.",
+      "The podcast studio is located by the lobby and is accessible to everyone who is a member of Värmeverket. The space is equipped with streaming equipment that will enable eSports professionals to stream directly from the podcast studio, as well as press conferences and virtual meetings.",
+  },
+  {
+    srcList: [
+      "https://hypermedia.varmeverket.com/hi-res/VV-M%C3%84STERVERKET.mp4",
+    ],
+    headerText1: "MÄSTER",
+    headerText2: "VERKET",
+    textParagraph:
+      "Just above Underverket lies Mästerverket. Our state of the art film studio! Film is deep rooted in the history of Värmeverket since it's on the set of Torpederna our founder Leo Razzak discovered the building. The barrier to entry for film is very steep and is usually obtained through school or throughout assisting on different sets. That's why our mission is cut that time and create job opportunities to while teaching the slopes of filmmaking, while also giving filmmakers the right tools to tell their stories.",
+  },
+  {
+    srcList: ["https://hypermedia.varmeverket.com/hi-res/VV-LJUDVERKET.mp4"],
+    headerText1: "LJUD",
+    headerText2: "VERKET",
+    textParagraph:
+      "Music is a language. We speak it clearly. Through our studios, we create opportunities for local talent to be shaped and for professionals to take the step out globally.",
+  },
+  {
+    srcList: ["https://hypermedia.varmeverket.com/hi-res/VV-KONSTVERKET.mp4"],
+    headerText1: "KONSTVERKET",
+    headerText2: "VERKET",
+    textParagraph:
+      "On top of Panncentralen are Konstverket. Here we will house 10 artists per year who will also hold exhibitions and decorate Värmeverket.",
+  },
+  {
+    srcList: ["https://hypermedia.varmeverket.com/hi-res/VV-DANSVERKET.mp4"],
+    headerText1: "DANS",
+    headerText2: "VERKET",
+    textParagraph:
+      "Dansverket is the place where movement will be in focus with dancers, actors, theater, choreographers, acrobats. All types of performances and exhibitions will be performed here. We will offer workshops, competitions and training in dance and theater, to both new and experienced practitioners.",
+  },
+  {
+    srcList: ["https://hypermedia.varmeverket.com/hi-res/VV-BILDVERKET.mp4"],
+    headerText1: "BILD",
+    headerText2: "VERKET",
+    textParagraph:
+      "The place for Photographers, Videographers, Directors, Producers, Art Directors, Stylists, Here is the opportunity to build set design and record. You can photograph, edit, and quickly go between different expressions due to the size of the surface.",
   },
 ];
 
@@ -118,16 +151,14 @@ export default function Home() {
           <motion.div
             key="modal"
             initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+            animate={{ opacity: 1, y: 0 }}>
             <Modal />
           </motion.div>
         ) : (
           <motion.div
             key="main"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
+            animate={{ opacity: 1 }}>
             <main>
               <div className="md:-mt-40 -mt-32">
                 <HeroText
