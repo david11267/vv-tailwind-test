@@ -5,15 +5,12 @@ import { useWindowSize } from "../hooks/useWindowSize";
 const VerticalScrollItem = ({ srcList, index, currentIndex, cancelScroll }) => {
   const containerRef = useRef();
   const size = useWindowSize();
+  const videoRef = useRef();
   const { scrollY } = useScroll({
     container: containerRef,
   });
   const height = size.width >= 1024 ? 384 : 288;
-  const transform = useTransform(
-    scrollY,
-    [0, height * (srcList.length - 1)],
-    [0, -height * (srcList.length - 1)]
-  );
+  const transform = useTransform(scrollY, [0, height * (srcList.length - 1)], [0, -height * (srcList.length - 1)]);
   const physics = { damping: 15, mass: 0.5, stiffness: 65 };
   const spring = useSpring(transform, physics);
 
@@ -33,6 +30,14 @@ const VerticalScrollItem = ({ srcList, index, currentIndex, cancelScroll }) => {
     };
   }, [scrollY, height, cancelScroll, srcList.length, currentIndex, index]);
 
+  useLayoutEffect(() => {
+    if (index === currentIndex) {
+      videoRef.current?.play();
+    } else {
+      videoRef.current?.pause();
+    }
+  }, [index, currentIndex]);
+
   return (
     <div
       style={{
@@ -41,18 +46,15 @@ const VerticalScrollItem = ({ srcList, index, currentIndex, cancelScroll }) => {
         transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",
         left: `${index * 100 - currentIndex * 100}%`,
       }}
-      className="absolute top-0 w-full h-full"
-    >
+      className="absolute top-0 w-full h-full">
       <div
         style={{ height, scrollSnapType: "y mandatory" }}
         ref={containerRef}
-        className="relative overflow-y-scroll z-10"
-      >
+        className="relative overflow-y-scroll z-10">
         <div
           style={{
             height: height * srcList.length,
-          }}
-        >
+          }}>
           {srcList.map((_, index) => (
             <div key={index} style={{ height, scrollSnapAlign: "center" }} />
           ))}
@@ -64,14 +66,13 @@ const VerticalScrollItem = ({ srcList, index, currentIndex, cancelScroll }) => {
         className="absolute top-0 w-full h-full"
         style={{
           y: spring,
-        }}
-      >
+        }}>
         {srcList.map((src, index) => (
           <div className="w-full h-full" key={index}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <video className="w-full h-full object-cover" poster={src} autoPlay muted loop >
+            <video ref={videoRef} className="w-full h-full object-cover" poster={src} autoPlay muted loop>
               <source src={src} />
-            </video >
+            </video>
             {/* <img className="w-full h-full object-cover" src={src} alt="" /> */}
           </div>
         ))}
@@ -113,12 +114,8 @@ const HeaderImageNextPrev = ({
   return (
     <>
       <div className={classNameTextDiv + " mb-4 z-10"}>
-        <h1 className="text-3xl lg:text-5xl font-GtAmericaExtended">
-          {header1}
-        </h1>
-        <h1 className="text-3xl lg:text-5xl font-semibold font-GtAmericaExpandedBlack">
-          {header2}
-        </h1>
+        <h1 className="text-3xl lg:text-5xl font-GtAmericaExtended">{header1}</h1>
+        <h1 className="text-3xl lg:text-5xl font-semibold font-GtAmericaExpandedBlack">{header2}</h1>
       </div>
       <div
         onTouchStart={() => {
@@ -136,8 +133,7 @@ const HeaderImageNextPrev = ({
         onMouseLeave={() => {
           document.body.style = "";
           setCancelScroll(false);
-        }}
-      >
+        }}>
         <div className="relative h-72 lg:h-96 overflow-hidden">
           {items.map((item, index) => {
             return (
@@ -157,8 +153,7 @@ const HeaderImageNextPrev = ({
             onClick={() => {
               previous();
             }}
-            href={prevHref}
-          >
+            href={prevHref}>
             {prevText}
           </button>
           <button
@@ -166,8 +161,7 @@ const HeaderImageNextPrev = ({
             onClick={() => {
               next();
             }}
-            href={nextHref}
-          >
+            href={nextHref}>
             {nextText}
           </button>
         </div>
