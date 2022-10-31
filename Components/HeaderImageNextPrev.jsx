@@ -119,12 +119,10 @@ const HeaderImageNextPrev = ({
       </div>
       <div
         onTouchStart={() => {
-          document.body.style = "overflow: hidden";
           setCancelScroll(true);
         }}
         onTouchEnd={() => {
           setCancelScroll(false);
-          document.body.style = "";
         }}
         onMouseEnter={() => {
           document.body.style = "overflow: hidden";
