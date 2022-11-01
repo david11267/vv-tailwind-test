@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import CallToActionLink from "./CallToActionLink";
 import { motion, useScroll, useSpring } from "framer-motion";
 
-const textClass = "text-black text-opacity-80";
+const textClass = "text-stone-500 text-opacity-80";
 const textClassAbs =
   "absolute overflow-hidden whitespace-nowrap top-0 bottom-0 left-0";
 
@@ -48,7 +48,7 @@ const ExplainingText = ({ rows, prompt }) => {
             ))}
           </h1>
           {prompt && (
-            <h1 className="xl:text-6xl md:text-4xl text-xl lg:text-center md:mt-12 mt-8">
+            <h1 className="xl:text-6xl md:text-4xl text-xl lg:text-center md:mt-16 mt-12">
               {prompt.left}
               <span className="font-bold">{prompt.right}</span>
             </h1>
