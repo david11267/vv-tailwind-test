@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
 export default class Footer extends Component {
+
   render() {
+    const handleScroll = event => {
+      console.log('scrollTop: ', event.currentTarget.scrollTop);
+      console.log('offsetHeight: ', event.currentTarget.offsetHeight);
+    };
     return (
-      <footer className="text-black bg-white md:pt-8 pt-4 pb-32">
+      <footer onScroll={handleScroll} className="text-black bg-white md:pt-8 pt-4 pb-32">
         <div className="max-w-7xl m-auto mt-8 p-4">
           <p id="contact" className="mb-8 font-semibold">
             CONTACT
@@ -13,7 +18,7 @@ export default class Footer extends Component {
             <span className="font-bold">TOUCH.</span>
           </h1>
           <p className="mb-12 md:text-md">Start a conversation</p>
-          <h1 className="mb-12 md:text-4xl">
+          <h1 className="mb-8 text-lg md:text-2xl">
             <a href="mailto:info@varmeverket.com">info@varmeverket.com</a>
           </h1>
           <div className="flex pb-12">

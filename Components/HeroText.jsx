@@ -28,7 +28,7 @@ const HeroText = ({
   }, [rotatingWordList.length]);
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex pb-32 w-full items-center justify-center h-screen">
       <div className="flex max-h-8 md:max-h-12 xl:max-h-16 2xl:max-h-20 sm:text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl text-xl">
         <span className="block font-GTAmericaExpandedRegular overflow-hidden text-right">
           {rotatingWordList.map((item) => (

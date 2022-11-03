@@ -45,7 +45,7 @@ export default function NavBar() {
 
           <ul className="text-lg ml-auto flex items-center justify-between gap-16">
             <li className="whitespace-nowrap cursor-pointer">
-              <a onClick={() => setIsOpen(true)}>
+              <a href="https://www.varmeverket.com/sign-up">
                 APPLY NOW</a>
             </li>
             <li className="whitespace-nowrap cursor-pointer">
@@ -81,7 +81,7 @@ export default function NavBar() {
         <div className="content text-left mt-24 mb-12">
           <ul className="font-GtAmericaExpandedBlack text-4xl ">
             <li className="mb-8">
-              <a className="cursor-pointer hover:underline" {...getToggleProps()} onMouseDown={() => setIsOpen(true)}>
+              <a className="cursor-pointer hover:underline" href="https://www.varmeverket.com/sign-up">
                 APPLY
               </a>
             </li>

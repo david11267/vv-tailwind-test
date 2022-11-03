@@ -54,7 +54,7 @@ const ExplainingText = ({ rows, prompt }) => {
             </h1>
           )}
           <div className="flex justify-center">
-            <CallToActionLink text="APPLY NOW" />
+            <CallToActionLink href={"https://www.varmeverket.com/sign-up"} text="APPLY NOW" />
           </div>
         </div>
       </div>
