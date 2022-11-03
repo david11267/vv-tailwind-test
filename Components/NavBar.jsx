@@ -4,7 +4,7 @@ import useCollapse from "react-collapsed";
 import { useModalContext } from "./ModalContextProvider";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-
+import { RemoveScroll } from 'react-remove-scroll';
 const MENU_BREAKPOINT = 1000;
 
 export default function NavBar() {
@@ -13,11 +13,15 @@ export default function NavBar() {
   const { getCollapseProps, getToggleProps, isExpanded, setExpanded } = useCollapse();
   const size = useWindowSize();
 
+
   useEffect(() => {
     if (size.width > MENU_BREAKPOINT) {
       setExpanded(false);
+
     }
+
   }, [size.width]);
+
 
   const handleNavigate = (id) => {
     setIsOpen(false);
@@ -66,11 +70,15 @@ export default function NavBar() {
             onMouseDown={() => !isExpanded && setIsOpen(false)}
             {...getToggleProps()}>
             {isExpanded ? "CLOSE" : "MENU"}
+            {isExpanded ? <RemoveScroll /> : null}
           </div>
+
         )}
       </div>
-      <div {...getCollapseProps()} className="col-span-2">
-        <div className="content text-left mt-24 mb-12 ">
+
+      <div {...getCollapseProps()} className="col-span-2 ">
+
+        <div className="content text-left mt-24 mb-12">
           <ul className="font-GtAmericaExpandedBlack text-4xl ">
             <li className="mb-8">
               <a className="cursor-pointer hover:underline" {...getToggleProps()} onMouseDown={() => setIsOpen(true)}>
@@ -106,6 +114,7 @@ export default function NavBar() {
           <a>TIKTOK</a>
         </div>
       </div>
+
     </div >
   );
 }

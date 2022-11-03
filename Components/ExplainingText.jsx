@@ -48,7 +48,7 @@ const ExplainingText = ({ rows, prompt }) => {
             ))}
           </h1>
           {prompt && (
-            <h1 className="xl:text-6xl md:text-4xl text-xl lg:text-center md:mt-16 mt-12">
+            <h1 className="xl:text-6xl md:text-4xl text-xl lg:text-center md:mt-16 mt-18">
               {prompt.left}
               <span className="font-bold">{prompt.right}</span>
             </h1>
