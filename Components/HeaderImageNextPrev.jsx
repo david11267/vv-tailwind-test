@@ -70,7 +70,7 @@ const VerticalScrollItem = ({ srcList, index, currentIndex, cancelScroll }) => {
         {srcList.map((src, index) => (
           <div className="w-full h-full" key={index}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <video ref={videoRef} className="w-full h-full object-cover" playsinline poster={src} autoPlay muted loop>
+            <video ref={videoRef} className="w-full h-full object-cover" playsInline poster={src} autoPlay muted loop>
               <source src={src} />
             </video>
             {/* <img className="w-full h-full object-cover" src={src} alt="" /> */}

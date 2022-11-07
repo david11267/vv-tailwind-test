@@ -5,6 +5,7 @@ import { useModalContext } from "./ModalContextProvider";
 
 const Modal = () => {
   const [spaces, setSpaces] = useState([]);
+  const [isSubmited, setIsSubmited] = useState(false);
   const [formValues, setFormValues] = useState({
     space_name: "",
     start: "",
@@ -40,7 +41,8 @@ const Modal = () => {
       },
       method: "POST",
     });
-    setIsOpen(false);
+    setIsSubmited(true);
+    return response;
   };
 
   const handleChange = (event) => {
@@ -51,12 +53,8 @@ const Modal = () => {
 
   };
 
-  const [modalFace, setModalFace] = useState();
-
-
-  return (
-
-    <form
+  function standardModal() {
+    return (<form
       onSubmit={onSubmit}
       className="relative flex flex-col m-auto max-w-5xl w-[90vw] mb-8 p-8 bg-gray-600 bg-opacity-80"
     >
@@ -149,7 +147,35 @@ const Modal = () => {
       <button className="bg-gray-400 p-2 mt-4 ml-auto" type="submit">
         SEND REQUEST
       </button>
-    </form >
+    </form >)
+  }
+
+  function submitedModal() {
+    return (<div className="relative flex flex-col m-auto max-w-5xl w-[90vw] mb-8 p-8 bg-gray-600 bg-opacity-80">
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="font-GtAmericaExpandedBlack text-xl">THANKS FOR BOOKING</h2>
+        <button
+          className="absolute right-4 top-4 font-GtAmericaExpandedBlack text-xl"
+          onClick={() => setIsOpen(false)}
+          type="button"
+        >
+          X
+        </button>
+      </div >
+    </div>
+    )
+  }
+
+  function modalController() {
+    return isSubmited ? submitedModal() : standardModal()
+  }
+
+  return (
+    <>
+      {modalController()}
+    </>
+
+
   );
 };
 
