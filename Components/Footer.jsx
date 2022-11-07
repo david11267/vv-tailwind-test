@@ -17,7 +17,6 @@ export default class Footer extends Component {
             <span>KEEP.IN.</span>
             <span className="font-bold">TOUCH.</span>
           </h1>
-          <p className="mb-12 md:text-md">Start a conversation</p>
           <h1 className="mb-8 text-lg md:text-2xl">
             <a href="mailto:info@varmeverket.com">info@varmeverket.com</a>
           </h1>

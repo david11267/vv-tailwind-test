@@ -28,10 +28,10 @@ const ExplainingText = ({ rows, prompt }) => {
   }, [scroll]);
 
   return (
-    <div ref={containerRef} className="flex justify-center">
+    <div ref={containerRef} className="flex justify-center -m-4">
       <div className="flex justify-center">
         <div className="font-GtAmerica">
-          <h1 className="xl:text-6xl md:text-4xl text-xl">
+          <h1 className="xl:text-6xl md:text-4xl text-2xl">
             {rows?.map((row, index) => (
               <div key={index} className="relative">
                 <div
