@@ -79,7 +79,7 @@ function Mobile({
   items,
 }) {
   return (
-    <div className="mt-20 flex flex-col justify-center">
+    <div className="flex flex-col justify-center">
       <div className="flex lg:flex-row flex-col">
         <HeaderImageNextPrev
           items={items}

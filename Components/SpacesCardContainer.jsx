@@ -57,7 +57,7 @@ const data = [
 const SpacesCardContainer = () => {
   return (
     <div className="mb-20">
-      <div id="spaces" className="flex flex-col mb-10">
+      <div id="spaces" className="flex flex-col mb-10 scroll-mt-20">
         <span className="text-4xl">OUR.</span>
         <span className="text-4xl font-bold">SPACES.</span>
       </div>

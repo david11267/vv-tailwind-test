@@ -149,16 +149,18 @@ export default function Home() {
           <motion.div
             key="modal"
             initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}>
+            animate={{ opacity: 1, y: 0 }}
+          >
             <Modal />
           </motion.div>
         ) : (
           <motion.div
             key="main"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}>
+            animate={{ opacity: 1 }}
+          >
             <main>
-              <div className="md:-mt-40 -mt-32">
+              <div>
                 <HeroText
                   rotatingWordList={[
                     "Family",
@@ -203,7 +205,7 @@ export default function Home() {
               <div className={layoutClass + " mb-40"}>
                 <ExplainingText
                   rows={[
-                    "VÄRMEVEVERKET FOCUSES ON",
+                    "VÄRMEVERKET FOCUSES ON",
                     "EDUCATION, CREATION &",
                     "INNOVATION WITHIN ART AND",
                     "CULTURE.",
@@ -228,7 +230,7 @@ export default function Home() {
                 </div>
               </div>
               <ScrollingText text="BOOK A SPACE!" />
-              <div className={layoutClass + " mb-40"}>
+              <div className={layoutClass + " mb-40 z-40 relative"}>
                 <Constilation
                   imageHeader1="MADE.AT."
                   imageHeader2="VÄRMEVERKET."
